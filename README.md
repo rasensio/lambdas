@@ -1,4 +1,4 @@
-# Lambda utilities
+# Lambda utilities https://github.com/rasensio/lambdas
 
 ## Install
 
