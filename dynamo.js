@@ -13,6 +13,17 @@ const insert = async (table, payload) => {
   return await dynamo.putItem(params).promise()
 }
 
+const get = async (table, key, value) => {
+  var params = {
+    TableName: table,
+    key: {
+      S: value
+     }, 
+    ReturnValues: "ALL_OLD"
+  }  
+  return await dynamo.putItem(params).promise()
+}
+
 /**
  * will map the function to a dynamo object
  */
