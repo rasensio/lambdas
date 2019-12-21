@@ -16,10 +16,9 @@ const insert = async (table, payload) => {
 const get = async (table, key, value) => {
   var params = {
     TableName: table,
-    key: {
+    Key: {
       S: value
-     }, 
-    ReturnValues: "ALL_OLD"
+     }
   }  
   return await dynamo.getItem(params).promise()
 }
