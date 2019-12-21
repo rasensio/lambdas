@@ -21,7 +21,7 @@ const get = async (table, key, value) => {
      }, 
     ReturnValues: "ALL_OLD"
   }  
-  return await dynamo.get(params).promise()
+  return await dynamo.getItem(params).promise()
 }
 
 /**
