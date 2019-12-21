@@ -3,23 +3,25 @@ var dynamo = new aws.DynamoDB()
 
 /**
  * insert a payload into a table
- */ 
+ */
 const insert = async (table, payload) => {
   var params = {
     TableName: table,
     Item: mapper(payload),
     ReturnValues: "ALL_OLD"
-  }  
+  }
   return await dynamo.putItem(params).promise()
 }
 
 const get = async (table, key, value) => {
   var params = {
-    TableName: table,
     Key: {
-      S: value
-     }
-  }  
+      key: {
+        S: value
+      }
+    },
+    TableName: table
+  }
   return await dynamo.getItem(params).promise()
 }
 
