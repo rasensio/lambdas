@@ -21,7 +21,7 @@ const get = async (table, key, value) => {
      }, 
     ReturnValues: "ALL_OLD"
   }  
-  return await dynamo.putItem(params).promise()
+  return await dynamo.get(params).promise()
 }
 
 /**
@@ -32,3 +32,4 @@ const mapper = (payload) => {
 }
 
 exports.insert = insert
+exports.get = get
