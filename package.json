@@ -1,6 +1,6 @@
 {
   "name": "@rasensio/lambda",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Lambda utilities",
   "main": "index.js",
   "scripts": {
